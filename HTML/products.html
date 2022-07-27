@@ -4,8 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../CSS/products.css" />
-    <title>Document</title>
+    <title>Products Page</title>
   </head>
-  <body></body>
+  <body>
+    <!-- <button id="test">x</button> -->
+    <header>
+      <h1>WUDO</h1>
+      <nav>
+        <ul>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./HTML/products.html"><li>Products</li></a>
+          <a href="#"><li>Blog</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+        <a href="./HTML/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+    </header>
+    <div class="cards" id="popProduct">
+      <div class="close">X</div>
+      <div class="card"></div>
+    </div>
+    <section id="heroSec">
+      <div class="heroContainer">
+        <div class="heroSecHeadLabels">
+          <p>Category</p>
+          <p>Price</p>
+          <p>Search</p>
+        </div>
+        <div class="heroSecHead">
+          <div class="heroSecHeadCategory">
+            <select name="category" id="category">
+              <option value="all" id="all">all</option>
+              <option value="cheers" id="Cheers">Cheers</option>
+              <option value="tables" id="Tables">Tables</option>
+              <option value="kitchen" id="Kitchen">Kitchen</option>
+              <option value="ceramics" id="Ceramics">Ceramics</option>
+            </select>
+          </div>
+          <div class="heroSecHeadPrice">
+            <select name="price" id="price">
+              <option value="HTL" id="HTL">high to low</option>
+              <option value="LTH" id="LTH">low to high</option>
+            </select>
+          </div>
+          <div class="heroSecHeadSerch">
+            <input type="text" name="serch" id="serch" />
+            <i class="fa-solid fa-magnifying-glass" id="serch-icon"></i>
+          </div>
+        </div>
+        <div class="products">
+          <!-- <div class="product">
+            <div class="product-img">
+              <img
+                src="https://i.pinimg.com/564x/fe/a4/bc/fea4bc6cf91b5868621b176e457f51d8.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-title">
+              <h2>Lorem ipsum.</h2>
+            </div>
+            <div class="product-hover">
+              <button>Details</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h1>WUDO</h1>
+      <ul>
+        <li>Help</li>
+        <li>Contact Us</li>
+        <li>Privacy & Terms</li>
+      </ul>
+      <div>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </footer>
+    <!--End of footer section-->
+    <script src="../JS/dom.js"></script>
+    <script src="../JS/main.js"></script>
+  </body>
 </html>
