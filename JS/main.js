@@ -84,3 +84,129 @@ if (!window.localStorage.getItem("products")) {
   window.localStorage.setItem("products", JSON.stringify(initProducts));
 }
 let products = JSON.parse(window.localStorage.getItem("products"));
+function makeProductsCards(array) {
+  productsContainer.innerHTML = ``;
+  if (array.length != 0) {
+    array.forEach((element) => {
+      productsContainer.innerHTML += `<div class="product" data-id='${element.id}'>
+                <div class="product-img">
+                <img
+                    src=${element.imgUrl}
+                    alt=""
+                />
+                </div>
+                <div class="product-title">
+                <h2>${element.name}</h2>
+                </div>
+                <div class="product-hover">
+                <button>Details</button>
+                </div>
+                </div>`;
+    });
+  } else {
+    productsContainer.innerHTML = "There is no Products";
+  }
+  test();
+}
+function findCurrentProduct() {
+  let obj = {};
+  products.forEach((element) => {
+    if (element.id == currentProductId) obj = element;
+  });
+  return obj;
+}
+
+function createPop(pop) {
+  popProduct.querySelector(".card").innerHTML = `<div class="card-img">
+          <img
+            src=${pop.imgUrl}
+            alt=""
+          />
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            <h2>${pop.name}</h2>
+          </div>
+          <div class="card-desc">
+            ${pop.describetion}
+          </div>
+          <div class="op">
+            <div class="card-price"><span id="price">${pop.price}</span>$</div>
+            <div class="amount">
+              <label for="number">Amount:</label
+              ><input type="number" min="1" value="1" id="number" />
+            </div>
+          </div>
+          <div class="card-btn">
+            <button>Add To Cart</button>
+          </div>
+        </div>`;
+}
+function categoryFilter(category) {
+  if (category == "all") {
+    makeProductsCards(products);
+  } else {
+    let newProducts = [];
+    products.forEach((element) => {
+      if (element.category === category) {
+        newProducts.push(element);
+      }
+    });
+    makeProductsCards(newProducts);
+  }
+}
+function PriceFilter(price) {
+  let newProducts2 = [];
+  if (price === "LTH") {
+    newProducts2 = [
+      ...products.sort((a, b) =>
+        a.price > b.price ? 1 : b.price > a.price ? -1 : 0
+      ),
+    ];
+  } else {
+    newProducts2 = [
+      ...products.sort((a, b) =>
+        a.price < b.price ? 1 : b.price < a.price ? -1 : 0
+      ),
+    ];
+  }
+
+  makeProductsCards(newProducts2);
+}
+function serchFilter(input) {
+  let newProducts = [];
+  products.forEach((element) => {
+    if (element.name.search(input) != -1) {
+      newProducts.push(element);
+    }
+  });
+  makeProductsCards(newProducts);
+}
+
+let test = () => {
+  setTimeout(() => {
+    let productCards = document.querySelectorAll(".product");
+    productCards.forEach((product) => {
+      product.addEventListener("click", () => {
+        showPopProduct(popProduct);
+        currentProductId = product.dataset.id;
+        createPop(findCurrentProduct());
+      });
+    });
+  }, 0);
+};
+test();
+
+categorySelector.addEventListener("change", (event) => {
+  categoryFilter(
+    categorySelector.options[categorySelector.selectedIndex].value
+  );
+});
+priceSelector.addEventListener("change", (event) => {
+  PriceFilter(priceSelector.options[priceSelector.selectedIndex].value);
+});
+serchInput.addEventListener("input", (event) => {
+  serchFilter(serchInput.value);
+});
+
+makeProductsCards(products);
