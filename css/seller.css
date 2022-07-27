@@ -166,10 +166,10 @@ header {
       transition: all .4s ease;
     }
   
-    /* .pop-up.active{
+    .pop-up.active{
       opacity: 1;
       visibility: visible;
-    } */
+    }
     
     .popup-body .input{
       margin: 0.5rem;
@@ -181,7 +181,7 @@ header {
   
     .popup-body .add-button{
       width: 6rem;
-      margin-top: 3rem;
+      margin-top: .8rem;
       padding: 10px;
       border-radius: 10px;
       border: none;
@@ -200,6 +200,10 @@ header {
     .icons .fa-pen-to-square{
       color:  #516451;
       cursor: pointer;
+    }
+
+    .fa-xmark{
+        cursor: pointer;
     }
   
     footer {
