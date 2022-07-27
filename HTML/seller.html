@@ -5,42 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/seller.css" />
-    <title>Document</title>
-  </head>
-  <body>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  />
     <title>Seller Page</title>
   </head>
   <body>
-    <section class="pop-up active">
+    <section class="pop-up">
       <div class="popup-body">
         <i class="fa-solid fa-xmark"></i>
         <input
           class="input"
           type="text"
           name=""
-          id=""
+          id="name"
           placeholder="enter product name"
         />
         <input
           class="input"
           type="text"
           name=""
-          id=""
+          id="img-link"
           placeholder="enter image link"
         />
         <input
           class="input"
           type="text"
           name=""
-          id=""
+          id="price"
           placeholder="enter product price"
         />
         <input
           class="input"
           type="text"
           name=""
-          id=""
+          id="details"
           placeholder="enter product details"
+        />
+        <input
+          class="input"
+          type="text"
+          name=""
+          id="category"
+          placeholder="enter product category"
         />
         <button class="add-button">ADD</button>
       </div>
@@ -49,12 +57,12 @@
       <h1>WUDO</h1>
       <nav>
         <ul>
-          <a href="../index.html"><li>Home</li></a>
-          <a href="products.html"><li>Products</li></a>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./HTML/products.html"><li>Products</li></a>
           <a href="#"><li>Blog</li></a>
           <a href="#"><li>Contact</li></a>
         </ul>
-        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="./HTML/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
       </nav>
     </header>
     <main>
@@ -66,7 +74,7 @@
         </div>
       </section>
       <section class="product-cards">
-        <div class="card">
+        <!-- <div class="card">
           <img
             src="https://i.pinimg.com/564x/ad/2b/16/ad2b16a59a66d1343f8262d47e7a0fa3.jpg"
           />
@@ -149,7 +157,7 @@
               <i class="fa-solid fa-pen-to-square"></i>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
     </main>
     <footer>
@@ -165,7 +173,7 @@
       <a href="#"><i class="fa-brands fa-instagram"></i></a>
   </div>
   </footer>
-  <script src="../JS/dom.js"></script>
-    <script src="../JS/main.js"></script>
+  <script src="../JS/seller.dom.js"></script>
+    <script src="../JS/seller.js"></script>
   </body>
 </html>
