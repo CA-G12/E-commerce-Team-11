@@ -59,16 +59,16 @@ header a {
   cursor: pointer;
 }
 
-.fa-cart-shopping{
-    padding-left: 0.5rem;
+.fa-cart-shopping {
+  padding-left: 0.5rem;
 }
 
-header nav ul a:hover{
-    border-bottom: 3px solid #51657a;
+header nav ul a:hover {
+  border-bottom: 3px solid #51657a;
 }
 
 .clicked {
-    border-bottom: 3px solid #51657a;
+  border-bottom: 3px solid #51657a;
 }
 
 .scroll {
@@ -78,7 +78,7 @@ header nav ul a:hover{
 }
 
 .scroll nav ul a:hover {
-    border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .scroll nav a {
@@ -165,7 +165,7 @@ main {
   align-self: flex-start;
 }
 
-#products a {
+#products > a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -177,14 +177,14 @@ main {
   font-size: 0.8rem;
 }
 
-#products a:hover {
-    background-color: transparent;
-    color: #333;
-    outline: 2px solid #333;
+#products > a:hover {
+  background-color: transparent;
+  color: #333;
+  outline: 2px solid #333;
 }
 
 #products i {
-    padding-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .container {
@@ -205,7 +205,7 @@ main {
   width: 25%;
 }
 
-.container .card .bg{
+.container .card .bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -215,14 +215,29 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transform: rotateX(90deg); */
+  transform: rotateX(90deg);
   transform-origin: top left;
   transition: all 0.25s ease-in-out;
+}
+
+.container .card .bg a {
+  color: white;
+  font-size: 2.5rem;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.container .card .bg a:hover {
+  transform: translateY(30px);
 }
 .container div img {
   height: 100%;
 }
 
+.container .card span {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
 #services {
   padding: 2rem 0;
   margin: 2rem 0;
