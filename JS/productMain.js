@@ -1,3 +1,4 @@
+
 if (!window.localStorage.getItem("products")) {
   let initProducts = [
     {
@@ -138,9 +139,15 @@ function createPop(pop) {
             </div>
           </div>
           <div class="card-btn">
-            <button>Add To Cart</button>
+            <button class="addbtn">Add To Cart</button>
           </div>
         </div>`;
+  let btn = document.querySelector(
+    "#popProduct > div.card > div.card-content > div.card-btn > button"
+  );
+  btn.addEventListener("click", () => {
+    addToCart(pop);
+  });
 }
 function categoryFilter(category) {
   if (category == "all") {
@@ -195,8 +202,6 @@ let test = () => {
     });
   }, 0);
 };
-test();
-
 categorySelector.addEventListener("change", (event) => {
   categoryFilter(
     categorySelector.options[categorySelector.selectedIndex].value
@@ -210,3 +215,21 @@ serchInput.addEventListener("input", (event) => {
 });
 
 makeProductsCards(products);
+
+function addToCart(newProduct) {
+  let found = false;
+  products.forEach((element) => {
+    if (element.id == newProduct.is) found = true;
+  });
+  if (!found) {
+    if (!window.localStorage.getItem("cart")) {
+      //{ name: "te", price: 1000, amount: 5 }
+      window.localStorage.setItem("cart", JSON.stringify([]));
+    }
+    let cart = JSON.parse(window.localStorage.getItem("cart"));
+    cart.push(newProduct);
+    window.localStorage.setItem("cart", JSON.stringify(cart));
+  }
+}
+
+// addToCart({ name: "te", price: 1000, amount: 5 });
