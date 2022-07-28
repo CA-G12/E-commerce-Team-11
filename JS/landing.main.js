@@ -1,86 +1,111 @@
 if (!window.localStorage.getItem("products")) {
-    let initProducts = [
-      {
-        id: 0,
-        name: "product1",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 100,
-        imgUrl:
-          "https://i.pinimg.com/564x/fe/a4/bc/fea4bc6cf91b5868621b176e457f51d8.jpg",
-        category: "tables",
-      },
-      {
-        id: 1,
-        name: "product2",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 200,
-        imgUrl:
-          "https://i.pinimg.com/564x/4a/c2/87/4ac287ba54267c4bf97ee8eec68366da.jpg",
-        category: "tables",
-      },
-      {
-        id: 2,
-        name: "product3",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 300,
-        imgUrl:
-          "https://i.pinimg.com/564x/d3/8c/8f/d38c8feb2fbf1d4927597498af1cd755.jpg",
-        category: "cheers",
-      },
-      {
-        id: 4,
-        name: "brown cheer",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 20,
-        imgUrl:
-          "https://i.pinimg.com/564x/79/36/1c/79361c083224a716916784202612717b.jpg",
-        category: "cheers",
-      },
-      {
-        id: 5,
-        name: "another cheer",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 20,
-        imgUrl:
-          "https://i.pinimg.com/564x/79/36/1c/79361c083224a716916784202612717b.jpg",
-        category: "cheers",
-      },
-      {
-        id: 6,
-        name: "aaa ",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 20,
-        imgUrl:
-          "https://i.pinimg.com/564x/79/36/1c/79361c083224a716916784202612717b.jpg",
-        category: "cheers",
-      },
-      {
-        id: 7,
-        name: "aaa bbb",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 20,
-        imgUrl:
-          "https://i.pinimg.com/564x/79/36/1c/79361c083224a716916784202612717b.jpg",
-        category: "cheers",
-      },
-      {
-        id: 8,
-        name: "aaa bbb ccc",
-        describetion:
-          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
-        price: 20,
-        imgUrl:
-          "https://i.pinimg.com/564x/79/36/1c/79361c083224a716916784202612717b.jpg",
-        category: "cheers",
-      },
-    ];
+  let initProducts = [
+    {
+      id: 0,
+      name: "Tara Pantry",
+      description:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 100,
+      imgUrl:"https://ak1.ostkcdn.com/images/products/30884162/Tara-Pantry-23.75-W-x-15-D-x-67.75-H-13ee0613-545d-4f03-807f-0e5cd67d5da5_1000.jpg",
+      category: "Kitchen",
+    },
+    {
+      id: 1,
+      name: "Blue Modern Smooth Vase",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 50,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ba4621d99db3186b4afce18d3b529d2fbbb34986/Modern-Contemporary-Elegant-Blue-Stoneware-Smooth-Glazed-Vase-16%22H-X-5%22D-or-21%22H-X-6%22D.jpg",
+      category: "Ceramics",
+    },
+    {
+      id: 2,
+      name: "Smart Led Lighted Bathroom Mirror",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 200,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/825aa766509723e15f602b9e78449c156f428a78/AQUADOM-IMAGE%2C-Rount-24%22%2CSmart-LED-Lighted-Bathroom-Mirrors-with-Built-in-TVs%2C-Defogger.jpg",
+      category: "Ceramics",
+    },
+    {
+      id: 4,
+      name: "Midtown Dining Set",
+      description:
+        "https://i.ibb.co/b7VyRnK/Urban-Elements-Nordic-7-Piece-Dining-Set-With-Cushions.webp",
+      price: 100,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/318e9b9539bb07557dc49d2586a11f7b72ae7093/Urban-Elements-Nordic-7-Piece-Dining-Set---With-Cushions.jpg",
+      category: "Kitchen",
+    },
+    {
+      id: 5,
+      name: "Wood Room Divider",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 70,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/2e6b4e3022cdf9ced8cf04b1286c18bf34084baa/HOMCOM-Blinds-Style-4-Panel-Wood-Room-Divider%2C-67%27%27-Tall-Folding-Privacy-Screen-Panels-Gray.jpg",
+      category: "Tables",
+    },
+    {
+      id: 6,
+      name: "Plaid Comforter Bed Set ",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 200,
+      imgUrl:
+        "https://secure.img1-cg.wfcdn.com/im/38232562/compr-r85/4215/42152547/normandy-plaid-coppery-tanblackbeigewhite-microfiber-reversible-modern-contemporary-comforter-set.jpg",
+      category: "Chairs",
+    },
+    {
+      id: 7,
+      name: "Wood Entryway Bench",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 80,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/79c01534abd547e0adae904359b1a3c59cf24629/Craftsbury-36%22W-Wood-Entryway-Bench.jpg",
+      category: "Chairs",
+    },
+    {
+      id: 8,
+      name: "Media Dresser and Desk Combo",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 100,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa3184f22a2cd6837ddd2334502f957f464ed34f/Novogratz-Kelly-3-in-1-Media-Dresser-and-Desk-Combo.jpg",
+      category: "Chairs"
+    },
+    {
+      id: 9,
+      name: " Garden Stool",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+      price: 250,
+      imgUrl:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ead29e9220f3549fbea172d03610a64cc9d25981/SAFAVIEH-Parri-Indoor---Outdoor-Ceramic-Decorative-Garden-Stool.jpg",
+      category: "Ceramics"
+    },{
+      id:10,
+      name:'Handmade Natural Fiber Rug',
+      description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat",
+    price: 50,
+    imgUrl:
+      "https://ak1.ostkcdn.com/images/products/is/images/direct/a2788a9ebf37123549881d7e81cbe725cd0f6201/TUHOME-Bar-Cart.jpg",
+    category: "Kitchen"
+    },
+    {
+      id:11,
+      name:'Outdoor Meta Lounge Chair',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturanimi ut laborum illo quaerat',
+      price: 70,
+      imgUrl: 'https://ak1.ostkcdn.com/images/products/is/images/direct/2ac66b6781061f9a10211caf17a2e6e5a893c92d/PHI-VILLA-Outdoor-Patio-Metal-Adjustable-Relaxing-Recliner-Lounge-Chair-with-Cushion.jpg',
+      category: "Chairs"
+    }
+  ];
     window.localStorage.setItem("products", JSON.stringify(initProducts));
   }
   let products = JSON.parse(window.localStorage.getItem("products"));
@@ -92,10 +117,11 @@ let allList = document.querySelectorAll('header nav ul a');
 allList[0].classList = 'clicked';
 allList.forEach((e) => {
   e.addEventListener('click', () => {
-    console.log(`clicked`)
-    allList.forEach((anchor) => {anchor.classList.remove('clicked')
-    e.classList.add('clicked')
-  })
+    if(e.classList === 'clicked'){
+      allList.forEach((anchor) => {anchor.classList.remove('clicked')
+      e.classList.add('clicked')
+    })
+    }
 })});
 
   //Change the color of the header background when scrolling the page
